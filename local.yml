@@ -1,0 +1,18 @@
+- hosts: localhost
+  connection: local
+  become: true
+
+  pre_tasks:
+    - name: Upgrade to latest packages.
+      apt:
+        name: "*"
+        state: latest
+
+
+  tasks:
+
+    - include: tasks/packages.yml
+
+  roles:
+    # - pbis
+    - harden_server

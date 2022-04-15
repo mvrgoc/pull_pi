@@ -1,0 +1,16 @@
+- name: Install additional packages.
+  apt:
+    name: '{{ packages }}'
+    state: present
+  vars:
+    packages:
+     - lynis
+     - rkhunter
+     - logwatch
+     - rsyslog
+     - postfix
+     - net-snmp
+     - htop
+     - ntpdate
+     - cronie
+     - cronie-anacron
