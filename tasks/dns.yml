@@ -1,8 +1,12 @@
-- name: Set DNS nameservers.
+- name: Delete existing DNS nameservers.
   lineinfile:
     path: /etc/resolv.conf
     regexp: '^nameserver\s*'
     state: absent
+
+- name: Add new custom DNS nameservers.
+  lineinfile:
+    path: /etc/resolv.conf
     line: |
       nameserver 1.1.1.1
       nameserver 8.8.8.8
