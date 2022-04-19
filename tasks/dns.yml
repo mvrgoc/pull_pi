@@ -1,7 +1,7 @@
 - name: Set DNS nameservers.
   lineinfile:
     path: /etc/resolv.conf
-    regexp: '^nameserver\s.*$'
+    regexp: '^nameserver\s.*'
     line: |
       nameserver 1.1.1.1
       nameserver 8.8.8.8
