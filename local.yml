@@ -12,7 +12,8 @@
   tasks:
 
     - include: tasks/packages.yml
+    - include: tasks/dns.yml
 
   roles:
-    # - pbis
+
     - harden_server
