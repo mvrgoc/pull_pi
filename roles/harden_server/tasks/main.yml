@@ -14,4 +14,4 @@
     insertafter: '^#Banner'
     line: Banner /etc/warning
   notify:
-    - restart_ssh
+    - RestartSSH
