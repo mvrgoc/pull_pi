@@ -13,4 +13,5 @@
     dest: /etc/ssh/sshd_config
     insertafter: '^#Banner'
     line: Banner /etc/warning
-  notify: restart_ssh
+  notify:
+    - restart_ssh
