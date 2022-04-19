@@ -1,5 +1,4 @@
 ---
-
 - name: Copy ssh login banner.
   ansible.builtin.copy:
     src: ./files/warning
@@ -15,8 +14,3 @@
     line: Banner /etc/warning
   notify:
     - RestartSSH
-
-  handlers:
-    - name: RestartSSH
-      service: sshd
-      state: restarted
