@@ -8,6 +8,6 @@
      - rkhunter
      - logwatch
      - rsyslog
-     - net-snmp
+     - snmpd
      - htop
      - ntpdate
