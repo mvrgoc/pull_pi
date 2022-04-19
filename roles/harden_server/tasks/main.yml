@@ -15,3 +15,8 @@
     line: Banner /etc/warning
   notify:
     - RestartSSH
+
+  handlers:
+    - name: RestartSSH
+      service: sshd
+      state: restarted
