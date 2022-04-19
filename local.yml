@@ -1,6 +1,6 @@
 - hosts: localhost
   connection: local
-  become: true
+  become: yes
 
   pre_tasks:
     - name: Upgrade to latest packages.
