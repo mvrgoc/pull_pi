@@ -8,9 +8,6 @@
      - rkhunter
      - logwatch
      - rsyslog
-     - postfix
      - net-snmp
      - htop
      - ntpdate
-     - cronie
-     - cronie-anacron
