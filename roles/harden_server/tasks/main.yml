@@ -1,16 +1,5 @@
 ---
 
-- name:  Stop firewalld service.
-  service:
-    name: firewalld
-    state: stopped
-    enabled: no
-
-- name: Put SELinux in permissive mode.
-  selinux:
-    policy: targeted
-    state: permissive
-
 - name: Copy ssh login banner.
   ansible.builtin.copy:
     src: ./files/warning
@@ -25,10 +14,3 @@
     insertafter: '^#Banner'
     line: Banner /etc/warning
   notify: restart_ssh
-
-- name: Copy auditd rules to /etc/audit/rules.d folder.
-  copy:
-    src: ./files/audit.rules
-    dest: /etc/audit/rules.d
-    owner: root
-    group: root
