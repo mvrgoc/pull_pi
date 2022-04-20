@@ -12,3 +12,4 @@
      - htop
      - ntpdate
      - aide
+     - aide-common
