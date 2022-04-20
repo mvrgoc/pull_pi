@@ -3,6 +3,8 @@
   become: yes
 
   pre_tasks:
+
+    - include: tasks/packages.yml
     - name: Upgrade to latest packages.
       apt:
         name: "*"
@@ -11,7 +13,7 @@
 
   tasks:
 
-    - include: tasks/packages.yml
+    #- include: tasks/packages.yml
     - include: tasks/dns.yml
 
   roles:
