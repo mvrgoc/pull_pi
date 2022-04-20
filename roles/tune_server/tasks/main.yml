@@ -1,0 +1,7 @@
+---
+
+- name: Tune kernel and copy config file.
+  copy:
+    src: ./files/sysctl.conf
+    dest: /etc/sysctl.conf
+  become: yes
