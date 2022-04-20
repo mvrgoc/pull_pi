@@ -1,7 +1,7 @@
 - name: Delete existing DNS nameservers.
   lineinfile:
     path: /etc/resolv.conf
-    regexp: '^nameserver\s*'
+    regexp: '^nameserver\s*$'
     state: absent
 
 - name: Add new custom DNS nameservers.
