@@ -11,3 +11,4 @@
      - snmpd
      - htop
      - ntpdate
+     - aide
