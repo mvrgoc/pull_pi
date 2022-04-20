@@ -12,3 +12,10 @@
     insertafter: '^Defaults\s.*$'
     line: Defaults  logfile="/var/log/sudo.log"
   become: yes
+
+- name: Initialize AIDE.
+  shell: /usr/bin/aideinit
+  register: aideinit
+
+  debug:
+    msg: " Aide init {aideinit.stdout_lines}"
