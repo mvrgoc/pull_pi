@@ -17,5 +17,5 @@
   shell: /usr/bin/aideinit
   register: aideinit
 
-  debug:
+- debug:
     msg: " Aide init {aideinit.stdout_lines}"
