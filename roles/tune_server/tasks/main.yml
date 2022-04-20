@@ -5,3 +5,10 @@
     src: ./files/sysctl.conf
     dest: /etc/sysctl.conf
   become: yes
+
+- name: Set sudo log file.
+  lineinfile:
+    path: /etc/sudoers
+    insertafter: '^Defaults\s.*$'
+    line: Defaults  logfile="/var/log/sudo.log"
+  become: yes
